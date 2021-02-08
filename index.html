@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="all.css">
+    <title>Namaste Halal Mart Osaka 中津点</title>
+</head>
+<style>
+  
+  #myBtn {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 99;
+font-size: 18px;
+border: none;
+outline: none;
+background-color: red;
+color: white;
+cursor: pointer;
+padding: 15px;
+border-radius: 4px;
+}
+
+#myBtn:hover {
+background-color: #555;
+}
+.responsive {
+width: 100%;
+height: auto;
+}
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+
+.topnav a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.topnav a.active {
+background-color: #4CAF50;
+color: white;
+}
+
+.topnav .icon {
+display: none;
+}
+
+@media screen and (max-width: 600px) {
+.topnav a:not(:first-child) {display: none;}
+.topnav a.icon {
+  float: right;
+  display: block;
+}
+}
+
+@media screen and (max-width: 600px) {
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+}
+/*             सलाइड                                                */
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+.active {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+.zyohonaiyo{
+  background-color: cornsilk;
+  text-align: center;
+}
+.shopname{
+  
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+}
+.shopname{
+    margin: 0%;
+    padding: 0%;
+  }
+  .mark{
+    font-family: fantasy;
+  }
+
+</style>
+<body>
+    <!--माथि जाने बटमको लागि-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">トップへ</button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+        </script>
+        <!--माथि जाने बटमको लागि-->
+        <div class="topnav" id="myTopnav">
+          <a href="#home" class="active"><span class="mark">AB</span> ホーム</a>
+          <a href="#news">おすすめ</a>
+          <a href="#zyoho">情報</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class=""><b>三</b></i>
+          </a>
+        </div>
+        <!--फोटो भन्दा माथि-->
+        <h1 class="shopname">Namaste Halal Mart Osaka 中津店</h1>
+
+        <div style="padding-left:16px">
+          
+        </div>
+        
+        <!--मेन फोटो-->
+        <img src="photo/outside.jpg" alt="Nature" class="responsive" width="600" height="400">
+        <!--फोटो भन्दा तल-->
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            
+            <img src="photo/outside.jpg" style="width:100%">
+            <div class="text">बाहिरबाट</div>
+          </div>
+          
+          <div class="mySlides fade">
+            
+            <img src="photo/inside.png" style="width:100%">
+            <div class="text">भित्र</div>
+          </div>
+          
+          <div class="mySlides fade">
+            
+            <img src="photo/inside2.jpg" style="width:100%">
+            <div class="text">भित्र</div>
+          </div>
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+          
+          </div>
+          <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 5000); // Change image every 2 seconds
+            }
+            </script>
+        <!--おすすめ-->
+
+
+
+
+        <!--情報-->
+        <div id="zyoho">
+          
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.8087044447693!2d135.4937017155364!3d34.71000459022698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e7fa0ac5d199%3A0x4a5087fce9cbbd94!2sNamaste%20Halal%20Mart%20Osaka!5e0!3m2!1sja!2sjp!4v1612356839707!5m2!1sja!2sjp" width="100%" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <div class="zyohonaiyo">
+            <h2>合同会社エービーコーポレーション</h2>
+          <h3>Namaste Halal Mart Osaka 中津店</h3>
+              <h3>〒531-0071　大阪府大阪市北区中津1丁目5番27号</h3>
+              <h3>Phone: 06-6136-8532</h3>
+              <h3>Fax: 06-6136-8532</h3>
+          </div>
+  
+        </div>
+    
+</body>
+
+</html>
