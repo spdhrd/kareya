@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    $(document).ready(function(){
+          $(".logo").click(function(){
+            $(".menu").slideToggle(500);    
+          });
+          $(".study").click(function(){
+             alert("【結果を出す人の特徴】⇒素直、常にポジティブ思考");
+            });
+        });
+    
+    </script>
+<body>
+
+    <div class="header">
+        <div class="logo">
+<div class="m0">三 मेन्यु </div>
+        </div>
+        <div class="menu" style="align-content: center;">
+        <div class="m1">
+        <h3 class="f">HTML र CSS</h3>
+        <a class="f" href="html.html">HTML सिकौँ</a>
+        <a class="f" href="/css/default.asp">CSS सिकौँ</a>
+        <a class="f" href="/bootstrap/bootstrap_ver.asp">Bootstrap सिकौँ</a>
+        <a class="f" href="/w3css/default.asp">W3.CSS सिकौँ</a>
+        <a class="f" href="/colors/default.asp">Colors सिकौँ</a>
+        <a class="f" href="/icons/default.asp">Icons सिकौँ</a>
+        <a class="f" href="/graphics/default.asp">Graphics सिकौँ</a>
+        <a class="f" href="/howto/default.asp">कसरी सिकौँ</a>
+        <a class="f" href="/sass/default.php">Sass सिकौँ</a>
+     </div>
+        <div class="m2">
+         <h4 class="f1">जाभा स्क्रिप्ट</h4>
+        
+        <a class="f1" href="/js/default.asp">JavaScript सिकौँ</a>
+        <a class="f1" href="/jquery/default.asp">jQuery सिकौँ</a>
+        <a class="f1" href="/react/default.asp">React सिकौँ</a>
+        <a class="f1" href="/angular/default.asp">AngularJS सिकौँ</a>
+        <a class="f1" href="/js/js_json_intro.asp">JSON सिकौँ</a>
+        <a class="f1" href="/js/js_ajax_intro.asp">AJAX सिकौँ</a>
+        <a class="f1" href="/js/js_htmldom.asp">HTML-DOM सिकौँ</a>       
+        <a class="f1" href="/appml/default.asp">AppML सिकौँ</a>
+        <a class="f1" href="/w3js/default.asp">W3.JS सिकौँ</a>
+    </div>
+        
+
+    </div>
+<!--上記はメニュー基礎-->
+    
+    <div class="body" style="align-content: center;">
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+            <button class="w3-bar-item w3-button w3-large"
+            onclick="w3_close()">बन्द &times;</button>
+            <a href="#" class="w3-bar-item w3-button">परिचय</a>
+            <a href="#" class="w3-bar-item w3-button">HTML मुख्य भाग</a>
+            <a href="#" class="w3-bar-item w3-button"> सुत्र</a>
+            <a href="#" class="w3-bar-item w3-button">HTML मुख्य भाग</a>
+            <a href="#" class="w3-bar-item w3-button"> सुत्र</a>
+          </div>
+          
+          <div id="main">
+          
+          <div class="w3-teal">
+            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+            <div class="w3-container">
+              <h1>HTML को  बारेमा</h1>
+            </div>
+          </div>
+          <!--ここから内容-->
+          <h1>HTML भनेको के हो ?</h1>
+          <h5>HTML भनेको Hyper Text Markup Language हो । र यसको छोटकरि HTML हो ।</h5>
+          <h5>HTML वेबपेज बनाउनको लागि प्रयोग गरिने सामान्य भाषा हो</h5>
+          <h5>HTML ले वेबपेजको बनावट वर्णन गर्दछ ।</h5>
+          <h5>HTML मिलाएर राखिएको तत्वहरुको ले बनाइएको हुन्छ ।</h5>
+          <h5>HTMLतत्चहरुले वेवपेजको बनावट  कसरि देखाउने भनेर  ब्राउजर लाइ आदेश दिन्छ ।</h5>
+          <h5>HTMLको तत्चले 「यो हेडलाइन हो 」, 「यो प्यारग्राफ हो 」, 「यो लिङ्क हो 」 इत्यादिको चिजमा छाप लगाइदिन्छ।</h5>
+          <h4>जस्तै</h4>
+          
+              <iframe src="f1.txt" frameborder="0" height="250" width="auto" style="background-color: lightsalmon;"></iframe>
+              <h5 style="display: inline; align-content: center; background-color: darkblue; color: white;">उदाहरणको ब्याख्या</h5>
+              <iframe src="f1d.txt" frameborder="0" height="250" width="auto" style="background-color: lightsalmon;"></iframe>
+              <br>
+              
+              <p>कोडिङ्ग गर्न कम्प्युटरमा रहेको मेमो(Memo)बाट पनि सुरु गर्न सकिन्छ।<br>केहि गार्हो महसुश गर्नुहुनेले भिडियो हेर्नुहोस् ।</p>
+              <a href="http://"  target="_blank" style="display: inline;"><button class="w3-button w3-deep-purple">भिडियो</button></a>
+          　　<p>साथै कोडिङ्ग को लागि भिज्युअल स्टुडियो कोड पनि डाउनलोड गर्न सक्नुहुनेछ ।</p>
+          <a href="https://az764295.vo.msecnd.net/stable/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/VSCodeUserSetup-x64-1.52.1.exe" style="display: inline; padding-bottom: 2px;"><button class="w3-button w3-deep-purple">विन्डोजको लागि डाउनलोड</button></a>
+          <a href="https://code.visualstudio.com/download"  target="_blank" style="display: inline;"><button class="w3-button w3-deep-purple">अरुको लागि डाउनलोड</button></a>
+          <p>भिज्युअल स्टुडियो कोड इन्सटल गर्नुहोस्
+              <br>त्यसपछि File मा क्लिक गर्नुहोस् र Add folder to Workspace... मा क्लिक गरि आफुले काम गर्ने फोल्डर छान्नुहोस् ।(जुन फोल्डर तपाइको कम्प्युटरमा पहिला नै बनाएको हुनुपर्नेछ ।) <br>
+              फोल्डर बनाउनको लागि डेक्सटप स्क्रिनमा गएर माउस दाहिने क्लिक गर्नुहोस् र New वा (Add New) मा क्लिक गरि New Folder मा थिच्नुहोस् । <br>केहि गार्हो महसुश गर्नुहुनेले भिडियो हेर्नुहोस् ।
+          </p>
+          <a href="http://"  target="_blank" style="display: inline;"><button class="w3-button w3-deep-purple">भिडियो</button></a>
+          <h3 style="font-weight: bold;">HTML लिङ्क</h3>
+            <p>HTML लिङ्क a ट्यागले परिभाषित गर्छ ।<br>
+                लिङ्कपठाउने ठाँउ href तत्वले जनाउदछ ।<br>
+                लिङ्कतत्व थप जानकारिहरु प्रदान गर्नको लागि प्रयोग गरिन्छ ।<br>
+                </p>
+                <h3 style="font-weight: bold;">HTMLफोटो</h3>
+                <p>HTMLफोटो img ट्याग ले परिभाषित गर्छ ।<br>
+                    फोटोको फाइल (src), सट्टामा(फोटो नभएको खण्डमा)(alt),उचाइ(height) चौडाइ(width)ले परिभाषित गर्छ ।                
+                    </p>
+                    <h3 style="font-weight: bold;">HTMLको सोर्सकोड हेर्नेतरिका </h3>
+                <p>बेवपेज हेरेर 「आरे ！कसरि त्यो गरेको ?」भनेर सोचेको छैन ?<br>
+                    कसैले त्यो पेज कसरि बनाएको होला ? भनेर जिज्ञासा लागेको बेला किबोर्डको f12 वा अन्य तरिका बाट पानि सोर्सकोड हेर्न सकिन्छ ।<br>
+                    सिकारुहरुलाई सोर्स कोड हेरेर नयाँकुरा सिक्ने मौका मिल्नेछ ।</p>
+                    <h3 style="font-weight: bold;">HTMLको तत्व लेख्ने तरिका </h3>
+                <p>HTMLको सुरु भयपछि अन्त्य हुन्छ ।<br>
+                    तल दिइएको टेबल हेर्नुहोस् ।
+                    </p>
+                    
+
+
+          <!--ここまで内容-->
+          </div>
+          
+          <script>
+          function w3_open() {
+            document.getElementById("main").style.marginLeft = "200px";
+            document.getElementById("mySidebar").style.width = "200px";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+          }
+          function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+          }
+          </script>
+          
+
+    </div>
+    <div class="footer">
+
+    </div>
+
+    
+</body>
+<style>
+    table, th, tr, td {
+        border: 1px solid black;
+        border-collapse: collapse; 
+        padding-right: 20px;
+        }
+
+    .menu{
+        display: none;
+
+    }
+    .menu{
+        background-color: darksalmon;
+        height: auto;
+        column-count: auto;
+
+    }
+    .m0{
+        background-color: gold;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: left;
+    }
+    .m1,.m2,.m3,.m4,.m4,.m5,.m6{
+        column-count: 1;
+        display: inline-block;
+        padding-right: 100px;
+        
+       
+        
+    }
+    .F{
+        display: block;
+    }
+    a{
+        font-style: normal;
+        font-size:18px;
+        display: block;
+        margin-left: 15px;
+        color: black;
+        border-bottom: none;
+        
+    }
+    
+    a:hover{
+        background-color: darkolivegreen;
+        color: #000;
+    }
+    .w3-sidebar{
+            background-color: coral;
+            
+        }
+   
+</style>
+</html>
