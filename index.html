@@ -2,201 +2,312 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="all.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML & CSS सिकौ</title>
-</head>
-<script>
-    $(document).ready(function(){
-          $(".logo").click(function(){
-            $(".menu").slideToggle(500);    
-          });
-          $(".study").click(function(){
-             alert("【結果を出す人の特徴】⇒素直、常にポジティブ思考");
-            });
-        });
-    
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script type="text/javascript">
+        var bigyapans = 200;
     </script>
-<body>
+</head>
 
-    <div class="header">
-        <div class="logo">
-<div class="m0">三 मेन्यु </div>
-        </div>
-        <div class="menu" style="align-content: center;">
-        <div class="m1">
-        <h3 class="f">HTML र CSS</h3>
-        <a class="f" href="html.html">HTML सिकौँ</a>
-        <a class="f" href="/css/default.asp">CSS सिकौँ</a>
-        <a class="f" href="/bootstrap/bootstrap_ver.asp">Bootstrap सिकौँ</a>
-        <a class="f" href="/w3css/default.asp">W3.CSS सिकौँ</a>
-        <a class="f" href="/colors/default.asp">Colors सिकौँ</a>
-        <a class="f" href="/icons/default.asp">Icons सिकौँ</a>
-        <a class="f" href="/graphics/default.asp">Graphics सिकौँ</a>
-        <a class="f" href="/howto/default.asp">कसरी सिकौँ</a>
-        <a class="f" href="/sass/default.php">Sass सिकौँ</a>
-     </div>
-        <div class="m2">
-         <h4 class="f1">जाभा स्क्रिप्ट</h4>
-        
-        <a class="f1" href="/js/default.asp">JavaScript सिकौँ</a>
-        <a class="f1" href="/jquery/default.asp">jQuery सिकौँ</a>
-        <a class="f1" href="/react/default.asp">React सिकौँ</a>
-        <a class="f1" href="/angular/default.asp">AngularJS सिकौँ</a>
-        <a class="f1" href="/js/js_json_intro.asp">JSON सिकौँ</a>
-        <a class="f1" href="/js/js_ajax_intro.asp">AJAX सिकौँ</a>
-        <a class="f1" href="/js/js_htmldom.asp">HTML-DOM सिकौँ</a>       
-        <a class="f1" href="/appml/default.asp">AppML सिकौँ</a>
-        <a class="f1" href="/w3js/default.asp">W3.JS सिकौँ</a>
-    </div>
-        
+<body draggable="false">
+    <header>
+        <h5>SPD जापानीज शब्दकोषमा तपाईलाइ स्वागत छ ।</h5>
+    </header>
+
+    <div class="bigyapan" id="bigyapan">
+
+
+
 
     </div>
-<!--上記はメニュー基礎-->
-    
-    <div class="body" style="align-content: center;">
-            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-            <button class="w3-bar-item w3-button w3-large"
-            onclick="w3_close()">बन्द &times;</button>
-            <a href="#" class="w3-bar-item w3-button">परिचय</a>
-            <a href="#" class="w3-bar-item w3-button">HTML मुख्य भाग</a>
-            <a href="#" class="w3-bar-item w3-button"> सुत्र</a>
-            <a href="#" class="w3-bar-item w3-button">HTML मुख्य भाग</a>
-            <a href="#" class="w3-bar-item w3-button"> सुत्र</a>
-          </div>
-          
-          <div id="main">
-          
-          <div class="w3-teal">
-            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-            <div class="w3-container">
-              <h1>HTML को  बारेमा</h1>
+    <div class="mianpage">
+
+        <div class="divsearch">
+            <button class="sidebaropen" id="sidebaropen" onclick="openhome()">होम</button>
+            <div class="searchbar">
+                <input type="text" name="search" required id="searchtext" onfocus="sidehomehide()"
+                    onfocusout="sidehomeshow()" class="searchtext" placeholder="  यहाँबाट लेखेर खोज्नुहोस् .......">
+
             </div>
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="5542c57cdbb78f1c14eca4e6-text/javascript"></script>
-          </div>
-          <!--ここから内容-->
-          <h1>HTML भनेको के हो ?</h1>
-          <h5>HTML भनेको Hyper Text Markup Language हो । र यसको छोटकरि HTML हो ।</h5>
-          <h5>HTML वेबपेज बनाउनको लागि प्रयोग गरिने सामान्य भाषा हो</h5>
-          <h5>HTML ले वेबपेजको बनावट वर्णन गर्दछ ।</h5>
-          <h5>HTML मिलाएर राखिएको तत्वहरुको ले बनाइएको हुन्छ ।</h5>
-          <h5>HTMLतत्चहरुले वेवपेजको बनावट  कसरि देखाउने भनेर  ब्राउजर लाइ आदेश दिन्छ ।</h5>
-          <h5>HTMLको तत्चले 「यो हेडलाइन हो 」, 「यो प्यारग्राफ हो 」, 「यो लिङ्क हो 」 इत्यादिको चिजमा छाप लगाइदिन्छ।</h5>
-          <h4>जस्तै</h4>
-          
-              <iframe src="f1.txt" frameborder="0" height="250" width="auto" style="background-color: lightsalmon;"></iframe>
-              <h5 style="display: inline; align-content: center; background-color: darkblue; color: white;">उदाहरणको ब्याख्या</h5>
-              <iframe src="f1d.txt" frameborder="0" height="250" width="auto" style="background-color: lightsalmon;"></iframe>
-              <br>
-              
-              <p>कोडिङ्ग गर्न कम्प्युटरमा रहेको मेमो(Memo)बाट पनि सुरु गर्न सकिन्छ।<br>केहि गार्हो महसुश गर्नुहुनेले भिडियो हेर्नुहोस् ।</p>
-              <a href="http://"  target="_blank" style="display: inline;"><button class="w3-button w3-deep-purple">भिडियो</button></a>
-          　　<p>साथै कोडिङ्ग को लागि भिज्युअल स्टुडियो कोड पनि डाउनलोड गर्न सक्नुहुनेछ ।</p>
-          <a href="https://az764295.vo.msecnd.net/stable/ea3859d4ba2f3e577a159bc91e3074c5d85c0523/VSCodeUserSetup-x64-1.52.1.exe" style="display: inline; padding-bottom: 2px;"><button class="w3-button w3-deep-purple">विन्डोजको लागि डाउनलोड</button></a>
-          <a href="https://code.visualstudio.com/download"  target="_blank" style="display: inline;"><button class="w3-button w3-deep-purple">अरुको लागि डाउनलोड</button></a>
-          <p>भिज्युअल स्टुडियो कोड इन्सटल गर्नुहोस्
-              <br>त्यसपछि File मा क्लिक गर्नुहोस् र Add folder to Workspace... मा क्लिक गरि आफुले काम गर्ने फोल्डर छान्नुहोस् ।(जुन फोल्डर तपाइको कम्प्युटरमा पहिला नै बनाएको हुनुपर्नेछ ।) <br>
-              फोल्डर बनाउनको लागि डेक्सटप स्क्रिनमा गएर माउस दाहिने क्लिक गर्नुहोस् र New वा (Add New) मा क्लिक गरि New Folder मा थिच्नुहोस् । <br>केहि गार्हो महसुश गर्नुहुनेले भिडियो हेर्नुहोस् ।
-          </p>
-          <a href="http://"  target="_blank" style="display: inline;"><button class="w3-button w3-deep-purple">भिडियो</button></a>
-          <h3 style="font-weight: bold;">HTML लिङ्क</h3>
-            <p>HTML लिङ्क a ट्यागले परिभाषित गर्छ ।<br>
-                लिङ्कपठाउने ठाँउ href तत्वले जनाउदछ ।<br>
-                लिङ्कतत्व थप जानकारिहरु प्रदान गर्नको लागि प्रयोग गरिन्छ ।<br>
-                </p>
-                <h3 style="font-weight: bold;">HTMLफोटो</h3>
-                <p>HTMLफोटो img ट्याग ले परिभाषित गर्छ ।<br>
-                    फोटोको फाइल (src), सट्टामा(फोटो नभएको खण्डमा)(alt),उचाइ(height) चौडाइ(width)ले परिभाषित गर्छ ।                
-                    </p>
-                    <h3 style="font-weight: bold;">HTMLको सोर्सकोड हेर्नेतरिका </h3>
-                <p>बेवपेज हेरेर 「आरे ！कसरि त्यो गरेको ?」भनेर सोचेको छैन ?<br>
-                    कसैले त्यो पेज कसरि बनाएको होला ? भनेर जिज्ञासा लागेको बेला किबोर्डको f12 वा अन्य तरिका बाट पानि सोर्सकोड हेर्न सकिन्छ ।<br>
-                    सिकारुहरुलाई सोर्स कोड हेरेर नयाँकुरा सिक्ने मौका मिल्नेछ ।</p>
-                    <h3 style="font-weight: bold;">HTMLको तत्व लेख्ने तरिका </h3>
-                <p>HTMLको सुरु भयपछि अन्त्य हुन्छ ।<br>
-                    तल दिइएको टेबल हेर्नुहोस् ।
-                    </p>
-                    
 
 
-          <!--ここまで内容-->
-          </div>
-          
-          <script>
-          function w3_open() {
-            document.getElementById("main").style.marginLeft = "200px";
-            document.getElementById("mySidebar").style.width = "200px";
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("openNav").style.display = 'none';
-          }
-          function w3_close() {
-            document.getElementById("main").style.marginLeft = "0%";
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("openNav").style.display = "inline-block";
-          }
-          </script>
-          
+            <script>function sidehomehide() {
+                    document.getElementById("sidebaropen").style.display = "none";
+                }
+
+                function sidehomeshow() {
+                    document.getElementById("sidebaropen").style.display = "block";
+                }
+                $(document).ready(function () {
+                    $.ajax({
+                        url: "https://dictionary.spdda.com/japanese/mainview/ios/audio/css.txt", success: function (result1) {
+                            $("#bigyapancss").html(result1);
+                        }
+                    });
+                    $.ajax({
+                        url: "https://dictionary.spdda.com/japanese/mainview/ios/sidemenu.txt", success: function (result) {
+                            $("#home").html(result);
+                        }
+                    });
+                    $.ajax({
+                        url: "https://dictionary.spdda.com/japanese/mainview/ios/audio/bigyapan.txt", success: function (result2) {
+                            $("#bigyapan").html(result2);
+                        }
+                    });
+
+                    $(function () {
+                        $("#searchtext").on("keyup", function () {
+                            searchupchange();
+
+
+                        });
+
+                        $("#searchtext").change(function () {
+                            searchupchange();
+
+                        });
+                        function searchupchange() {
+                            let search = $("#searchtext").val();
+                            $.post("https://dictionary.spdda.com/japanese/mainview/ios/search.php",
+                                {
+                                    search: search
+                                }, function (data, status) {
+                                    $("#myTable").html(data);
+                                    if (localStorage.cspdads) {
+                                        localStorage.cspdads = Number(localStorage.cspdads) + 1;
+                                    } else {
+                                        localStorage.cspdads = 1;
+                                    }
+
+                                    if (Number(localStorage.cspdads) > bigyapans) {
+
+                                        $("#bigyapan").css("display", "block");
+                                        localStorage.cspdads = 1;
+                                        var audio = document.getElementById("audio");
+                                        audio.play();
+                                    }
+                                });
+                        }
+
+
+                    });
+                });</script>
+        </div>
+        <div class="home" id="home">
+
+        </div>
+        <script>function openhome() {
+                document.getElementById("home").style.left = "0vw";
+            }
+
+            function closehome() {
+                document.getElementById("home").style.left = "-100vw";
+            }</script>
+
+
+
+        <div class="listtable" id="listtable">
+            <table>
+                <thead>
+                    <tr>
+                        <th> <button class="listbtnhead">जापानीमा</button></th>
+                        <th> <button class="listbtnhead">नेपालीमा</button></th>
+
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                </tbody>
+            </table>
+
+
+
+        </div>
+        <div class="discribmainpage" id="discribmainpage">
+            <div class="discrbpg" id="discribpg">
+                <div class="discrbpghead" id="discrbpghead">
+
+                    <button class="closebtndiscrbpg" id="closediscribpg" onclick="closediscribpg()">×</button>
+                </div>
+                <table id="discrbpgmngtb">
+                    <thead>
+                        <tr id="discrbpgthtr">
+                            <th class="discrbpgth" id="discrbpgth"><button class="listbtnhead">जापानी</button></th>
+                            <th class="discrbpgth" id="discrbpgthne"><button class="listbtnhead">नेपाली</button></th>
+                        </tr>
+                    </thead>
+                    <tbody id="viewtbl">
+                    </tbody>
+                </table>
+                <script>$(document).ready(function () {
+
+                        $(".listbtn").on("click", function () {
+                            var thisRow = $(".listbtn").removeClass("activerow");
+                            var thisRow = $(this).addClass("activerow");
+
+                            document.getElementById("discribmainpage").style.display = "block";
+                            document.getElementById("discrbpgmngtb").style.display = "block";
+
+
+                        });
+                    });</script>
+
+            </div>
+        </div>
+        <script>function closediscribpg() {
+                document.getElementById("discribmainpage").style.display = "none";
+                document.getElementById("discrbpgmngtb").style.display = "none";
+
+            }</script>
+    </div>
+    <div id="barema" class="info barema">
+        <button class="homeclosebtn" onclick="baremaclose()">×</button>
 
     </div>
-    <div class="footer">
 
-    </div>
+    <script>$("#myTable").on('click', 'tr', function () {
+            // get the current row
+            var thisRow = $(this).addClass("activerow");
 
-    
+            document.getElementById("discribmainpage").style.display = "block";
+            document.getElementById("discrbpgmngtb").style.display = "block";
+
+            $(window).scrollTop(0);
+            var currentRow = $(this).closest("tr");
+            var col1b = currentRow.find("td:eq(0)").text();
+            var col1 = currentRow.find("span:eq(0)").text();
+            var col1a = currentRow.find("rt:eq(0)").text();
+            var col2 = currentRow.find("td:eq(1)").text();
+            var col3 = currentRow.find("td:eq(2)").text();
+            var col4 = currentRow.find("td:eq(3)").text();
+            var col5 = currentRow.find("td:eq(4)").text();
+            var col6 = currentRow.find("td:eq(5)").text();
+            var col7 = currentRow.find("td:eq(6)").text();
+            var col8 = currentRow.find("td:eq(7)").text();
+            var col9 = currentRow.find("td:eq(8)").text();
+            var col10 = currentRow.find("td:eq(9)").text();
+            var col11 = currentRow.find("td:eq(10)").text();
+            var col12 = currentRow.find("td:eq(11)").text();
+            var col13 = currentRow.find("td:eq(12)").text();
+            var col14 = currentRow.find("td:eq(13)").text();
+            var col15 = currentRow.find("td:eq(14)").text();
+            var col16 = currentRow.find("td:eq(15)").text();
+            var col17 = currentRow.find("td:eq(16)").text();
+            var col18 = currentRow.find("td:eq(17)").text();
+            var col19 = currentRow.find("td:eq(18)").text();
+            var col20 = currentRow.find("td:eq(19)").text();
+            var col21 = currentRow.find("td:eq(20)").text();
+            var col22 = currentRow.find("td:eq(21)").text();
+            var col23 = currentRow.find("td:eq(22)").text();
+            var col24 = currentRow.find("td:eq(23)").text();
+            var col25 = currentRow.find("td:eq(24)").text();
+            var col26 = currentRow.find("td:eq(25)").text();
+            var col27 = currentRow.find("td:eq(26)").text();
+            var col28 = currentRow.find("td:eq(27)").text();
+            var col29 = currentRow.find("td:eq(28)").text();
+            var col30 = currentRow.find("td:eq(29)").text();
+            var col31 = currentRow.find("td:eq(30)").text();
+            var col32 = currentRow.find("td:eq(31)").text();
+            var col33 = currentRow.find("td:eq(32)").text();
+            var col34 = currentRow.find("td:eq(33)").text();
+            var col35 = currentRow.find("td:eq(34)").text();
+            var col36 = currentRow.find("td:eq(35)").text();
+            var col37 = currentRow.find("td:eq(36)").text();
+            var col38 = currentRow.find("td:eq(37)").text();
+            var col39 = currentRow.find("td:eq(38)").text();
+            var col40 = currentRow.find("td:eq(39)").text();
+            var newtblcreat = "";
+            if (col1 !== "") {
+                newtblcreat = '<tr><td class="phone"><ruby>' + col1 + '<rt>' + col1a + '</rt></ruby> </td><td class="phone">' + col2 + '</td></tr>'
+            }
+            if (col1 == "") {
+                newtblcreat = '<tr><td class="phone">' + col1b + '</td><td class="phone">' + col2 + '</td></tr>'
+
+            }
+            if (col3 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col3 + '</td><td class="phone">' + col4 + '</td></tr>'
+            }
+            if (col5 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col5 + '</td><td class="phone">' + col6 + '</td></tr>'
+            }
+            if (col7 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col7 + '</td><td class="phone">' + col8 + '</td></tr>'
+            }
+            if (col9 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col9 + '</td><td class="phone">' + col10 + '</td></tr>'
+            }
+            if (col11 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col11 + '</td><td class="phone">' + col12 + '</td></tr>'
+            }
+            if (col13 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col13 + '</td><td class="phone">' + col14 + '</td></tr>'
+            }
+            if (col15 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col15 + '</td><td class="phone">' + col16 + '</td></tr>'
+            }
+            if (col17 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col17 + '</td><td class="phone">' + col18 + '</td></tr>'
+            }
+            if (col19 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col19 + '</td><td class="phone">' + col20 + '</td></tr>'
+            }
+            if (col21 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col21 + '</td><td class="phone">' + col22 + '</td></tr>'
+            }
+            if (col23 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col23 + '</td><td class="phone">' + col24 + '</td></tr>'
+            }
+            if (col25 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col25 + '</td><td class="phone">' + col26 + '</td></tr>'
+            }
+            if (col27 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col27 + '</td><td class="phone">' + col28 + '</td></tr>'
+            }
+            if (col29 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col29 + '</td><td class="phone">' + col30 + '</td></tr>'
+            }
+            if (col31 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col31 + '</td><td class="phone">' + col32 + '</td></tr>'
+            }
+            if (col33 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col33 + '</td><td class="phone">' + col34 + '</td></tr>'
+            }
+            if (col35 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col35 + '</td><td class="phone">' + col36 + '</td></tr>'
+            }
+            if (col37 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col37 + '</td><td class="phone">' + col38 + '</td></tr>'
+            }
+            if (col39 !== undefined) {
+                newtblcreat += '<tr><td class="phone">' + col39 + '</td><td class="phone">' + col40 + '</td></tr>'
+            }
+            document.getElementById("viewtbl").innerHTML = newtblcreat;
+
+        });
+
+
+
+
+
+
+        function baremaopn() {
+            document.getElementById("barema").style.display = "block";
+            document.getElementsByClassName("homeclosebtn").style.display = "block"
+        }
+
+        function baremaclose() {
+            document.getElementById("barema").style.display = "none";
+            document.getElementsByClassName("homeclosebtn").style.display = "none"
+        }</script>
+
+
+
 </body>
-<style>
-    table, th, tr, td {
-        border: 1px solid black;
-        border-collapse: collapse; 
-        padding-right: 20px;
-        }
-
-    .menu{
-        display: none;
-
-    }
-    .menu{
-        background-color: darksalmon;
-        height: auto;
-        column-count: auto;
-
-    }
-    .m0{
-        background-color: gold;
-        font-weight: bold;
-        font-size: 30px;
-        text-align: left;
-    }
-    .m1,.m2,.m3,.m4,.m4,.m5,.m6{
-        column-count: 1;
-        display: inline-block;
-        padding-right: 100px;
-        
-       
-        
-    }
-    .F{
-        display: block;
-    }
-    a{
-        font-style: normal;
-        font-size:18px;
-        display: block;
-        margin-left: 15px;
-        color: black;
-        border-bottom: none;
-        
-    }
-    
-    a:hover{
-        background-color: darkolivegreen;
-        color: #000;
-    }
-    .w3-sidebar{
-            background-color: coral;
-            
-        }
-   
+<style id="bigyapancss">
 </style>
+
 </html>
